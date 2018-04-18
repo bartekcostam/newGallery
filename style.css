@@ -1,4 +1,4 @@
-body{
+body {
 background: #eee;
 display: flex;
 flex-wrap: wrap;
@@ -8,7 +8,7 @@ justify-content: space-around;
 
 
 .photo{
-margin: 10px;
+margin: 10px 0;
 width: 120px;
 background: white;
 padding: 10px;
@@ -21,7 +21,8 @@ display: flex;
 justify-content: space-around;
 flex-wrap: wrap;
 
-
+transform: rotate(5deg);
+transition: 0.3s all ease-in-out;
 }
 
 .photo img {
@@ -35,9 +36,15 @@ width: 100px;
 margin-top: 10px;
 }
 
-.photo:hover{
-opacity: 1;
-transition: 0.3s all linear;
-transform: scale(1.1);
 
+
+.photo:nth-child(even)  {
+    transform: rotate(-2deg) scale(0.8);
 }
+
+.photo:hover{
+    opacity: 1;
+    
+    transform: scale(1.1);
+    
+    }
